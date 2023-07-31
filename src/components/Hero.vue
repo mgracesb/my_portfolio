@@ -5,29 +5,33 @@
         <p class="hero__header__text">Hello,</p>
       </div>
       <div class="hero__content">
-        <div class="hero__spinner">
-          <SpiningName />
-        </div>
-
-        <div class="animate__animated animate__jackInTheBox">
+        <div class="animate__animated animate__jackInTheBox animate__delay-1s">
           <div class="hero__content__card">
             <Card />
           </div>
         </div>
         <div class="hero__content__information">
-          <h1 class="animate__animated animate__fadeIn animate__delay-1s hero__content__information__title">
+          <h1
+            class="animate__animated animate__fadeIn animate__delay-2s hero__content__information__title"
+          >
             I'm Mercy Shyu,
           </h1>
-          <p class="animate__animated animate__fadeIn animate__delay-2s hero__content__information__description">
+          <p
+            class="animate__animated animate__fadeIn animate__delay-2s animate__slow hero__content__information__description"
+          >
             a Frontend Developer driven by the art of crafting <br />
             user friendly and visually engaging web and mobile applications with a focus on
             responsive design.
           </p>
-          <p class="animate__animated animate__fadeIn animate__delay-3s hero__content__information__description">
+          <p
+            class="animate__animated animate__fadeIn animate__delay-3s hero__content__information__description"
+          >
             I have been honing my skills in HTML5, CSS3, and JavaScript, working with frameworks
             like ReactJs, Vue, and React Native for seamless web and mobile development experiences
           </p>
-          <p class="animate__animated animate__fadeIn animate__delay-4s hero__content__information__description">
+          <p
+            class="animate__animated animate__fadeIn animate__delay-3s animate__slow hero__content__information__description"
+          >
             Feel free to CHECK MY PORTFOLIO!
           </p>
         </div>
@@ -39,10 +43,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Card from './molecules/Card.vue'
-import SpiningName from './molecules/SpiningName.vue'
+import SpinningText from './molecules/SpinningText.vue'
 
 export default defineComponent({
-  components: { Card, SpiningName },
+  components: { Card, SpinningText },
   setup() {
     return {}
   }
@@ -60,13 +64,6 @@ export default defineComponent({
   color: $c-clear
   display: flex
   flex-direction: column
-
-  &__spinner
-    position: absolute
-    width: 28.5rem
-    height: 16.5rem
-    bottom: 0
-    left: 18.5rem
 
   &__wrapper
     position: absolute

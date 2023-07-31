@@ -8,34 +8,58 @@
         src="@/assets/fish_three.png"
         alt="fish_decoration"
       />
-
       <img class="container__photo__item" src="@/assets/mercy.png" alt="Mercy Shyu's picture" />
     </div>
 
     <vue-scroll-snap :fullscreen="true">
-      <div class="item">
-        <Hero />
+      <div ref="hero" class="item">
+        <div v-if="heroIsVisible">
+          <Hero />
+        </div>
       </div>
-      <div class="item">
-        SLIDE 2
-        <p>Portfolio</p>
+      <div ref="projects" class="item">
+        <div v-if="projectsIsVisible">
+          <Projects />
+        </div>
       </div>
-      <div class="item">
-        SLIDE 3
-        <p>Contact</p>
-        <p></p>
+      <div ref="contact" class="item">
+        <div v-if="contactIsVisible">
+          <Contact />
+        </div>
       </div>
     </vue-scroll-snap>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import VueScrollSnap from 'vue-scroll-snap'
+import { useElementVisibility } from '@vueuse/core'
 import Hero from './Hero.vue'
+import Projects from './Projects.vue'
+import Contact from './Contact.vue'
 
 export default defineComponent({
-  components: { VueScrollSnap, Hero }
+  components: { VueScrollSnap, Hero, Projects, Contact },
+  setup() {
+    const hero = ref(null)
+    const heroIsVisible = useElementVisibility(hero)
+
+    const projects = ref(null)
+    const projectsIsVisible = useElementVisibility(projects)
+
+    const contact = ref(null)
+    const contactIsVisible = useElementVisibility(contact)
+
+    return {
+      hero,
+      heroIsVisible,
+      projects,
+      projectsIsVisible,
+      contact,
+      contactIsVisible
+    }
+  }
 })
 </script>
 
@@ -47,9 +71,6 @@ export default defineComponent({
   position: relative
   width: 100vw
   height: 100vh
-  // background: linear-gradient(-45deg, $c-dark--transparency, $c-purple--transparency, $c-turquoise--transparency,$c-blue--transparency, $c-pink--transparency)
-  // background-size: 200% 200%
-  // animation: gradient 15s ease infinite
   background-color: $c-dark
 
   &__photo
@@ -95,6 +116,4 @@ export default defineComponent({
 .scroll-snap-container
   height: 500px
   width: 500px
-
-
 </style>
