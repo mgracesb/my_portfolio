@@ -8,6 +8,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import PortfolioContent from './components/PortfolioContent.vue'
+import 'animate.css'
 
 export default defineComponent({
   components: { PortfolioContent }
