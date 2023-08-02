@@ -27,7 +27,7 @@
             class="animate__animated animate__fadeIn animate__delay-3s hero__content__information__description"
           >
             I have been honing my skills in HTML5, CSS3, and JavaScript, working with frameworks
-            like ReactJs, Vue, and React Native for seamless web and mobile development experiences
+            like ReactJs, Vue, and React Native for seamless web and mobile development experiences.
           </p>
           <p
             class="animate__animated animate__fadeIn animate__delay-3s animate__slow hero__content__information__description"

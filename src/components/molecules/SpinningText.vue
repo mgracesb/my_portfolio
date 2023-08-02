@@ -30,13 +30,15 @@ export default defineComponent({})
 
 <style scope lang="sass">
 @import "@/styles/_colors.sass"
+@import "@/styles/_animations.sass"
+
 
 $full-circle: 360
 
 .fold
   display: flex
   justify-content: flex-end
-  align-items: flex-start
+  align-items: flex-end
   height: 100%
   width: 100%
 
@@ -72,11 +74,4 @@ $full-circle: 360
           left: 0
 .red
   color: $c-red
-
-@keyframes spinningTitle
-  0%
-    transform: rotate(0deg)
-
-  100%
-    transform: rotate(360deg)
 </style>

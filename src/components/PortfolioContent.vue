@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <div class="container__photo">
-      <img class="container__photo__item--one" src="@/assets/fish_one.png" alt="fish_decoration" />
-      <img class="container__photo__item--two" src="@/assets/fish_two.png" alt="fish_decoration" />
+      <img class="container__photo__item--one" src="@/assets/bg/fish_one.png" alt="fish_decoration" />
+      <img class="container__photo__item--two" src="@/assets/bg/fish_two.png" alt="fish_decoration" />
       <img
         class="container__photo__item--three"
-        src="@/assets/fish_three.png"
+        src="@/assets/bg/fish_three.png"
         alt="fish_decoration"
       />
-      <img class="container__photo__item" src="@/assets/mercy.png" alt="Mercy Shyu's picture" />
+      <img class="container__photo__item" src="@/assets/bg/mercy.png" alt="Mercy Shyu's picture" />
     </div>
 
     <vue-scroll-snap :fullscreen="true">
@@ -36,7 +36,8 @@ import { defineComponent, ref } from 'vue'
 import VueScrollSnap from 'vue-scroll-snap'
 import { useElementVisibility } from '@vueuse/core'
 import Hero from './Hero.vue'
-import Projects from './Projects.vue'
+import Projects from './PersonalProjects.vue'
+
 import Contact from './Contact.vue'
 
 export default defineComponent({

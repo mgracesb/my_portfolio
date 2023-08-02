@@ -13,9 +13,7 @@
         <div class="animate__animated animate__jackInTheBox animate__delay-2s">
           <div class="projects__content__card--second">
             <Card>
-              <div class="projects__spinner">
-                <SpinningText />
-              </div>
+              <div class="projects__state">WORK IN PROGRESS</div>
             </Card>
           </div>
         </div>
@@ -23,24 +21,40 @@
           <h1
             class="animate__animated animate__fadeIn animate__delay-2s animate__slow projects__content__information__title"
           >
-            Desescalada Covid-19
+            <a
+              class="projects__content__information__title__text"
+              href="https://mgracesb.github.io/desescalada-covid/"
+            >
+              <span class="projects__content__information__title__icon">🦠</span> Desescalada Covid
+            </a>
           </h1>
           <p
             class="animate__animated animate__fadeIn animate__delay-2s animate__slow projects__content__information__description"
           >
-            descripcion
+            Due to the situation of confinement caused by the coronavirus pandemic in 2020, the
+            Government implemented a 4-phase de-escalation plan that varied according to the
+            healthcare district. <i>Desescalada covid</i> provided information to the user depending
+            on the date and the selected city.
           </p>
         </div>
         <div class="projects__content__information--second">
           <h1
             class="animate__animated animate__fadeIn animate__delay-3s animate__slow projects__content__information__title"
           >
-            Desescalada Covid-19
+            <p class="projects__content__information__title__text">
+              <img
+                class="projects__content__information__title__logo"
+                src="@/assets/projects/queryquarry.png"
+              />
+              QueryQuarry
+            </p>
           </h1>
           <p
             class="animate__animated animate__fadeIn animate__delay-3s animate__slow projects__content__information__description"
           >
-            descripcion
+            It's a platform for students to save and share exam questions, fostering a collaborative
+            learning environment by enabling other students to contribute their insights and
+            solutions to these questions.
           </p>
         </div>
       </div>
@@ -51,10 +65,9 @@
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue'
 import Card from './molecules/Card.vue'
-import SpinningText from './molecules/SpinningText.vue'
 
 export default defineComponent({
-  components: { Card, SpinningText },
+  components: { Card },
   setup() {
     onMounted(() => {
       console.log('mounted')
@@ -76,15 +89,12 @@ export default defineComponent({
   display: flex
   flex-direction: column
 
-  &__spinner
-    padding-right: 5%
-    padding-top: 5%
+  &__state
+    @include textSmall
     position: absolute
     right: 0
-    top: 0
-    width: 28.5rem
-    height: 16.5rem
-    z-index: 2
+    bottom: 0
+    transform: rotate(-90deg) translateX(5rem) translateY(3rem)
 
   &__wrapper
     position: absolute
@@ -119,36 +129,55 @@ export default defineComponent({
     &__card
       &--first
         width: 28.5rem
-        height: 10rem
+        height: 12rem
         transform: rotate(-4deg)
       &--second
         margin-top: 3rem
-        margin-left: 5rem
+        margin-left: 0.5rem
         width: 28.5rem
-        height: 10rem
+        height: 12rem
         transform: rotate(4deg)
 
     &__information
       &--first
+        width: 24rem
         position: absolute
-        top: 4.5rem
+        top: 4.8rem
         left: 7rem
         display: flex
         flex-direction: column
-        transform: rotate(-3.9deg)
+        transform: rotate(-4deg)
       &--second
+        width: 24rem
         position: absolute
-        top: 17.5rem
-        left: 12.5rem
+        top: 20rem
+        left: 8rem
         display: flex
         flex-direction: column
         transform: rotate(3.9deg)
 
       &__title
-        @include textStandard
+        &__text
+          @include textDefault
+          text-decoration: none
+          color: $c-clear
+          font-weight: 600
+          display: flex
+          flex-direction: row
+          align-items: flex-end
+
+        &__icon
+          font-size: 2rem
+          padding-right: 0.75rem
+
+        &__logo
+          height: 2rem
+          weight: 2rem
+          padding-right: 0.75rem
+
 
       &__description
-        @include textDefault
-        width: 24rem
+        @include textSmall
+        width: 85%
         margin-top: 1rem
 </style>

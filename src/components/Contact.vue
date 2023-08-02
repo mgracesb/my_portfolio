@@ -46,7 +46,7 @@
             >
               <img
                 class="contact__content__logo animate__animated animate__rotateInDownLeft animate__delay-3s"
-                src="@/assets/linkedin.png"
+                src="@/assets/social-media/linkedin.png"
                 alt="linkedin link"
               />
             </a>
@@ -57,14 +57,14 @@
             >
               <img
                 class="contact__content__logo animate__animated animate__rotateInDownLeft animate__delay-3s animate__slow"
-                src="@/assets/twitter.png"
+                src="@/assets/social-media/twitter.png"
                 alt="twitter link"
               />
             </a>
             <a href="https://twitter.com/MercyShyu" target="_blank" rel="noopener noreferrer">
               <img
                 class="contact__content__logo animate__animated animate__rotateInDownLeft animate__delay-3s animate__slower"
-                src="@/assets/instagram.png"
+                src="@/assets/social-media/instagram.png"
                 alt="instagram link"
               />
             </a>
