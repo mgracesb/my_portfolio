@@ -5,12 +5,16 @@
         <p class="projects__header__text">Projects,</p>
       </div>
       <div class="projects__content">
-        <div class="animate__animated animate__jackInTheBox animate__delay-1s">
+        <div
+          class="projects__content__card__container animate__animated animate__jackInTheBox animate__delay-1s"
+        >
           <div class="projects__content__card--first">
             <Card />
           </div>
         </div>
-        <div class="animate__animated animate__jackInTheBox animate__delay-2s">
+        <div
+          class="projects__content__card__container animate__animated animate__jackInTheBox animate__delay-2s"
+        >
           <div class="projects__content__card--second">
             <Card>
               <div class="projects__state">WORK IN PROGRESS</div>
@@ -52,10 +56,10 @@
           <p
             class="animate__animated animate__fadeIn animate__delay-3s animate__slow projects__content__information__description"
           >
-            Embrace the magic of shared wisdom. QueryQuarry is a student platform where
-            exam questions are saved and shared, fostering a collaborative learning environment.
-            Students engage with one another, contributing valuable insights and solutions to enrich
-            their understanding.
+            Embrace the magic of shared wisdom. QueryQuarry is a student platform where exam
+            questions are saved and shared, fostering a collaborative learning environment. Students
+            engage with one another, contributing valuable insights and solutions to enrich their
+            understanding.
           </p>
         </div>
       </div>
@@ -83,6 +87,7 @@ export default defineComponent({
 @import "@/styles/_colors.sass"
 @import "@/styles/_base.sass"
 @import "@/styles/_fonts.sass"
+@import "@/styles/_breakpoints.sass"
 
 
 .projects
@@ -158,7 +163,7 @@ export default defineComponent({
         left: 8rem
         display: flex
         flex-direction: column
-        transform: rotate(3.9deg)
+        transform: rotate(4deg)
 
       &__title
         &__text
@@ -179,9 +184,52 @@ export default defineComponent({
           weight: 2rem
           padding-right: 0.75rem
 
-
       &__description
         @include textSmall
         width: 85%
         margin-top: 1rem
+
+  @include tablet-max
+  &__wrapper
+    padding: 1rem
+
+  &__header
+    &__text
+      @include titleSmall
+
+  &__content
+    width: 100%
+    padding-left: 0
+
+    &__card
+      width: 100%
+      height: 30rem
+      transform: rotate(0deg)
+
+      &__container
+        width: 100%
+
+      &--first
+        width: 100%
+        transform: rotate(0deg)
+      &--second
+        margin-top: 2rem
+        margin-left: 0
+        width: 100%
+        transform: rotate(0deg)
+
+    &__information
+      &--first
+        width: 100%
+        left: 2rem
+        transform: rotate(0deg)
+      &--second
+        width: 100%
+        position: absolute
+        top: 18.5rem
+        left: 2rem
+        transform: rotate(0deg)
+
+      &__description
+        width: 80%
 </style>
