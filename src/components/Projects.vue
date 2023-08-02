@@ -52,9 +52,10 @@
           <p
             class="animate__animated animate__fadeIn animate__delay-3s animate__slow projects__content__information__description"
           >
-            It's a platform for students to save and share exam questions, fostering a collaborative
-            learning environment by enabling other students to contribute their insights and
-            solutions to these questions.
+            Embrace the magic of shared wisdom. QueryQuarry is a student platform where
+            exam questions are saved and shared, fostering a collaborative learning environment.
+            Students engage with one another, contributing valuable insights and solutions to enrich
+            their understanding.
           </p>
         </div>
       </div>
@@ -94,6 +95,8 @@ export default defineComponent({
     position: absolute
     right: 0
     bottom: 0
+    color: $c-caution
+    text-shadow: 1px 1px $c-dark
     transform: rotate(-90deg) translateX(5rem) translateY(3rem)
 
   &__wrapper

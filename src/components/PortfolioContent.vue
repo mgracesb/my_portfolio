@@ -36,7 +36,7 @@ import { defineComponent, ref } from 'vue'
 import VueScrollSnap from 'vue-scroll-snap'
 import { useElementVisibility } from '@vueuse/core'
 import Hero from './Hero.vue'
-import Projects from './PersonalProjects.vue'
+import Projects from './Projects.vue'
 
 import Contact from './Contact.vue'
 

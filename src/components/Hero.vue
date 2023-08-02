@@ -27,13 +27,20 @@
             class="animate__animated animate__fadeIn animate__delay-3s hero__content__information__description"
           >
             I have been honing my skills in HTML5, CSS3, and JavaScript, working with frameworks
-            like ReactJs, Vue, and React Native for seamless web and mobile development experiences.
+            like Vue, ReactJs and React Native for seamless web and mobile development experiences.
           </p>
           <p
             class="animate__animated animate__fadeIn animate__delay-3s animate__slow hero__content__information__description"
           >
-            Feel free to CHECK MY PORTFOLIO!
+            Some of the projects I had the privilage to contribute to are:
           </p>
+
+          <div class="animate__animated animate__fadeIn animate__delay-4s hero__projects">
+            <img src="@/assets/projects/sonora.svg" class="hero__projects__logo" />
+            <img src="@/assets/projects/vidasprime.svg" class="hero__projects__logo" />
+            <img src="@/assets/projects/cf.svg" class="hero__projects__logo" />
+            <img src="@/assets/projects/o2.svg" class="hero__projects__logo" />
+          </div>
         </div>
       </div>
     </div>
@@ -43,10 +50,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Card from './molecules/Card.vue'
-import SpinningText from './molecules/SpinningText.vue'
 
 export default defineComponent({
-  components: { Card, SpinningText },
+  components: { Card },
   setup() {
     return {}
   }
@@ -88,7 +94,7 @@ export default defineComponent({
   &__content
     position: relative
     padding-left: 5rem
-    padding-top: 3rem
+    padding-top: 2rem
     height: 100%
     width: 80%
     display: flex
@@ -96,13 +102,13 @@ export default defineComponent({
     align-items: flex-start
 
     &__card
-      width: 28.5rem
-      height: 20rem
+      width: 30.5rem
+      height: 24rem
       transform: rotate(-4deg)
 
     &__information
       position: absolute
-      top: 5.5rem
+      top: 4.5rem
       left: 7rem
       display: flex
       flex-direction: column
@@ -115,4 +121,19 @@ export default defineComponent({
         @include textDefault
         width: 24rem
         margin-top: 1rem
+        
+  &__projects
+    margin-top: 1rem
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-end
+
+    &__logo
+      height: 1.5rem
+      width: auto
+      &:first-child
+        height: 1rem
+        
+        
 </style>
