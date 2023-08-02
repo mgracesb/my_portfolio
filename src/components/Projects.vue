@@ -68,6 +68,7 @@ import { defineComponent, onMounted } from 'vue'
 import Card from './molecules/Card.vue'
 
 export default defineComponent({
+  name: 'ProjectSection',
   components: { Card },
   setup() {
     onMounted(() => {

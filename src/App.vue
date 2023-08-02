@@ -1,7 +1,4 @@
 <template>
-  <header>
-    <img alt="Vue logo" src="@/assets/logo.svg" width="25" height="25" />
-  </header>
   <PortfolioContent />
 </template>
 
