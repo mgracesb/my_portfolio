@@ -5,7 +5,7 @@
         <p class="contact__header__text">Contact,</p>
       </div>
       <div class="contact__content">
-        <div class="animate__animated animate__jackInTheBox animate__delay-1s">
+        <div class="animate__animated animate__jackInTheBox animate__delay-1s contact__content__card__container">
           <div class="contact__content__card">
             <Card />
           </div>
@@ -92,6 +92,7 @@ export default defineComponent({
 @import "@/styles/_colors.sass"
 @import "@/styles/_base.sass"
 @import "@/styles/_fonts.sass"
+@import "@/styles/_breakpoints.sass"
 
 
 .contact
@@ -163,4 +164,29 @@ export default defineComponent({
       width: 50px
       height: 50px
       margin-right: 1rem
+
+  @include tablet-max
+  &__wrapper
+    padding: 1rem
+
+  &__header
+    &__text
+      @include titleSmall
+
+  &__content
+    width: 100%
+    padding-left: 0
+
+    &__card
+      width: 100%
+      height: 22rem
+      transform: rotate(0deg)
+
+      &__container
+        width: 100%
+
+    &__information
+      left: 2rem
+      &__text
+          max-width: 20rem
 </style>

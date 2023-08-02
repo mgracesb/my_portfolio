@@ -1,8 +1,16 @@
 <template>
   <div class="container">
     <div class="container__photo">
-      <img class="container__photo__item--one" src="@/assets/bg/fish_one.png" alt="fish_decoration" />
-      <img class="container__photo__item--two" src="@/assets/bg/fish_two.png" alt="fish_decoration" />
+      <img
+        class="container__photo__item--one"
+        src="@/assets/bg/fish_one.png"
+        alt="fish_decoration"
+      />
+      <img
+        class="container__photo__item--two"
+        src="@/assets/bg/fish_two.png"
+        alt="fish_decoration"
+      />
       <img
         class="container__photo__item--three"
         src="@/assets/bg/fish_three.png"
@@ -11,7 +19,7 @@
       <img class="container__photo__item" src="@/assets/bg/mercy.png" alt="Mercy Shyu's picture" />
     </div>
 
-    <vue-scroll-snap :fullscreen="true">
+    <vue-scroll-snap :fullscreen="true" :height="windowHeight" :width="windowWidth">
       <div ref="hero" class="item">
         <div v-if="heroIsVisible">
           <Hero />
@@ -32,7 +40,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, onBeforeMount } from 'vue'
 import VueScrollSnap from 'vue-scroll-snap'
 import { useElementVisibility } from '@vueuse/core'
 import Hero from './Hero.vue'
@@ -43,6 +51,14 @@ import Contact from './Contact.vue'
 export default defineComponent({
   components: { VueScrollSnap, Hero, Projects, Contact },
   setup() {
+    let windowWidth
+    let windowHeight
+    
+    onBeforeMount(() => {
+      windowWidth = window.innerWidth
+      windowHeight = window.innerHeight
+    })
+
     const hero = ref(null)
     const heroIsVisible = useElementVisibility(hero)
 
@@ -58,7 +74,9 @@ export default defineComponent({
       projects,
       projectsIsVisible,
       contact,
-      contactIsVisible
+      contactIsVisible,
+      windowWidth,
+      windowHeight
     }
   }
 })
@@ -67,6 +85,7 @@ export default defineComponent({
 <style scoped lang="sass">
 @import "@/styles/_colors.sass"
 @import "@/styles/_animations.sass"
+@import "@/styles/_breakpoints.sass"
 
 .container
   position: relative
@@ -111,10 +130,30 @@ export default defineComponent({
         transform: rotateY(180deg) rotate(12deg)
         animation: float 8s ease-in-out infinite
 
+  @include tablet-max
+  .container
+    &__photo
+      &__item
+        width: auto
+        height: 30%
+        &--one
+          position: absolute
+          top: 5%
+          left: 70%
+          width: 25%
+        &--two
+          position: absolute
+          top: 55%
+          right: 85%
+          width: 25%
+          height: auto
+          animation: float 6s ease-in-out infinite
+        &--three
+          position: absolute
+          bottom: -3%
+          left: 16%
+          width: 30%
+
 .item
    min-height: 500px
-
-.scroll-snap-container
-  height: 500px
-  width: 500px
 </style>

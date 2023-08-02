@@ -5,7 +5,7 @@
         <p class="hero__header__text">Hello,</p>
       </div>
       <div class="hero__content">
-        <div class="animate__animated animate__jackInTheBox animate__delay-1s">
+        <div class="animate__animated animate__jackInTheBox animate__delay-1s hero__content__card__container">
           <div class="hero__content__card">
             <Card />
           </div>
@@ -64,6 +64,7 @@ export default defineComponent({
 @import "@/styles/_colors.sass"
 @import "@/styles/_base.sass"
 @import "@/styles/_fonts.sass"
+@import "@/styles/_breakpoints.sass"
 
 
 .hero
@@ -94,7 +95,7 @@ export default defineComponent({
 
   &__content
     position: relative
-    padding-left: 5rem
+    padding-left: 2rem
     padding-top: 2rem
     height: 100%
     width: 80%
@@ -135,6 +136,44 @@ export default defineComponent({
       width: auto
       &:first-child
         height: 1rem
-        
-        
+
+  @include tablet-max
+    &__wrapper
+      padding: 1rem
+
+    &__header
+      &__text
+        @include titleSmall
+
+    &__content
+      width: 100%
+      padding-left: 0
+
+      &__card
+        width: 100%
+        height: 30rem
+        transform: rotate(0deg)
+
+        &__container
+          width: 100%
+
+      &__information
+        left: 2rem
+        transform: rotate(0deg)
+
+        &__description
+          max-width: 20rem
+
+    &__projects
+      margin-top: 2rem
+      flex-wrap: wrap
+      justify-content: space-around
+      align-items: flex-start
+
+      &__logo
+        margin-bottom: 0.25rem
+        height: 2rem
+        width: auto
+        &:first-child
+          height: 1.5rem
 </style>
