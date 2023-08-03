@@ -165,7 +165,7 @@ export default defineComponent({
       height: 50px
       margin-right: 1rem
 
-  @include tablet-max
+  @include pc-min
   &__wrapper
     padding: 1rem
 

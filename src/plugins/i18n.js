@@ -2,7 +2,7 @@ import { createI18n } from "vue-i18n";
 import esTexts from "../locales/es.js";
 import enTexts from "../locales/en.js";
 
-const i18n = new createI18n({
+const i18n = createI18n({
   locale: 'es',
   fallbackLocale: 'en',
   messages: {

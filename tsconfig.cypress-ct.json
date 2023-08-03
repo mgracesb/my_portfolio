@@ -5,7 +5,8 @@
     "src/**/*",
     "src/**/*.vue",
     "cypress/support/component.*",
-    "cypress/support/commands.ts"
+    "cypress/support/commands.ts",
+    "i18n.d.ts"
   ],
   "exclude": [],
   "compilerOptions": {

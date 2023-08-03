@@ -20,8 +20,4 @@ header
   height: 4rem
   top: 0
   right: 0
-
-
-// @media (min-width: 1024px)
-//   header
 </style>
