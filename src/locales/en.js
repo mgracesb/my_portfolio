@@ -26,5 +26,11 @@ export default {
       description:
         'Embrace the magic of shared wisdom. QueryQuarry is a student platform where exam questions are saved and shared, fostering a collaborative learning environment. Students engage with one another, contributing valuable insights and solutions to enrich their understanding.'
     }
+  },
+  contact: {
+    location: 'Currently based in Madrid',
+    email: '{email}',
+    phone: '698 29 77 74',
+    followMe: 'Follow me!'
   }
 }

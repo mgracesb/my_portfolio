@@ -21,5 +21,11 @@ export default {
       description:
         '¡Sabiduría compartida! QueryQuarry es una plataforma estudiantil donde se crean y comparten preguntas de exámenes, fomentando un entorno de aprendizaje colaborativo. Los estudiantes interactúan entre sí, aportando valiosos conocimientos y soluciones para enriquecer la comprensión.'
     }
+  },
+  contact: {
+    location: 'Estoy actualmente en Madrid',
+    email: '{email}',
+    phone: '698 29 77 74',
+    followMe: '¡Sígueme!'
   }
 }

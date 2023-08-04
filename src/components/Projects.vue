@@ -83,7 +83,7 @@ export default defineComponent({
 <style scoped lang="sass">
 @import "@/styles/_colors.sass"
 @import "@/styles/_base.sass"
-@import "@/styles/_fonts.sass"
+@import "@/styles/_text.sass"
 @import "@/styles/_breakpoints.sass"
 
 
@@ -113,7 +113,7 @@ export default defineComponent({
     width: 100vw
     height: 100vh
     padding: 1rem
-
+    padding-top: 3rem
 
   &__header
     &__text
@@ -194,9 +194,9 @@ export default defineComponent({
   @include pc-min
     &__wrapper
       padding: 4rem
-    
+
     &__state
-      transform: rotate(-90deg) translateX(5rem) translateY(3rem)
+      transform: rotate(-90deg) translateX(5rem) translateY(1.5rem)
 
     &__header
       &__text
@@ -215,16 +215,17 @@ export default defineComponent({
           margin-left: 0.5rem
           width: 28.5rem
           transform: rotate(4deg)
-      
+
       &__information
         &--first
+          top: 5rem
           width: 24rem
-          left: 7rem
+          left: 4.5rem
           transform: rotate(-4deg)
         &--second
           width: 24rem
           top: 20rem
-          left: 8rem
+          left: 5rem
           transform: rotate(4deg)
 
         &__description

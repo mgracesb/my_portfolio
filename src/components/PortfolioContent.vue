@@ -109,7 +109,8 @@ export default defineComponent({
       height: 30%
       &--one
         position: absolute
-        left: 70%
+        top: 4%
+        left: 55%
         width: 25%
         height: auto
         animation: float 4s ease-in-out infinite
@@ -130,25 +131,24 @@ export default defineComponent({
         animation: float 8s ease-in-out infinite
 
   @include pc-min
-  .container
     &__photo
       &__item
         width: auto
         height: 85%
         &--one
           top: 5%
-          left: 55%
+          left: 50%
           width: 13%
         &--two
           top: 25%
-          right: 5%
+          right: 4%
           width: 15%
           height: auto
           animation: float 6s ease-in-out infinite
         &--three
           bottom: -8%
-          left: 37%
-          width: 23%
+          left: 38%
+          width: 20%
 
 .item
    min-height: 500px

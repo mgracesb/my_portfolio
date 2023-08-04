@@ -70,7 +70,7 @@ export default defineComponent({
 <style scoped lang="sass">
 @import "@/styles/_colors.sass"
 @import "@/styles/_base.sass"
-@import "@/styles/_fonts.sass"
+@import "@/styles/_text.sass"
 @import "@/styles/_breakpoints.sass"
 
 
@@ -91,6 +91,7 @@ export default defineComponent({
     width: 100vw
     height: 100vh
     padding: 1rem
+    padding-top: 3rem
 
   &__header
     &__text
