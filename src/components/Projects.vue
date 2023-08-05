@@ -2,7 +2,7 @@
   <div class="projects">
     <div class="projects__wrapper">
       <div class="animate__animated animate__jackInTheBox animate__slow">
-        <p class="projects__header__text">Projects,</p>
+        <p class="projects__header__text">{{ $t('sections.projects') }}</p>
       </div>
       <div class="projects__content">
         <div
@@ -17,7 +17,9 @@
         >
           <div class="projects__content__card--second">
             <Card>
-              <div class="projects__state">WORK IN PROGRESS</div>
+              <div class="projects__state">
+                {{ $t('general.inprogress') }}
+              </div>
             </Card>
           </div>
         </div>
@@ -29,16 +31,14 @@
               class="projects__content__information__title__text"
               href="https://mgracesb.github.io/desescalada-covid/"
             >
-              <span class="projects__content__information__title__icon">🦠</span> Desescalada Covid
+              <span class="projects__content__information__title__icon">🦠</span>
+              {{ $t('projects.project__one.title') }}
             </a>
           </h1>
           <p
             class="animate__animated animate__fadeIn animate__delay-2s animate__slow projects__content__information__description"
           >
-            Due to the situation of confinement caused by the coronavirus pandemic in 2020, the
-            Government implemented a 4-phase de-escalation plan that varied according to the
-            healthcare district. <i>Desescalada covid</i> provided information to the user depending
-            on the date and the selected city.
+            {{ $t('projects.project__one.description') }}
           </p>
         </div>
         <div class="projects__content__information--second">
@@ -50,16 +50,13 @@
                 class="projects__content__information__title__logo"
                 src="@/assets/projects/queryquarry.png"
               />
-              QueryQuarry
+              {{ $t('projects.project__two.title') }}
             </p>
           </h1>
           <p
             class="animate__animated animate__fadeIn animate__delay-3s animate__slow projects__content__information__description"
           >
-            Embrace the magic of shared wisdom. QueryQuarry is a student platform where exam
-            questions are saved and shared, fostering a collaborative learning environment. Students
-            engage with one another, contributing valuable insights and solutions to enrich their
-            understanding.
+            {{ $t('projects.project__two.description') }}
           </p>
         </div>
       </div>
@@ -86,7 +83,7 @@ export default defineComponent({
 <style scoped lang="sass">
 @import "@/styles/_colors.sass"
 @import "@/styles/_base.sass"
-@import "@/styles/_fonts.sass"
+@import "@/styles/_text.sass"
 @import "@/styles/_breakpoints.sass"
 
 
@@ -103,7 +100,7 @@ export default defineComponent({
     bottom: 0
     color: $c-caution
     text-shadow: 1px 1px $c-dark
-    transform: rotate(-90deg) translateX(5rem) translateY(3rem)
+    transform: rotate(-90deg) translateX(5.5rem) translateY(1.5rem)
 
   &__wrapper
     position: absolute
@@ -115,55 +112,60 @@ export default defineComponent({
     flex-direction: column
     width: 100vw
     height: 100vh
-    padding: 4rem
-
+    padding: 1rem
+    padding-top: 3rem
 
   &__header
     &__text
-      @include titleDefault
+      @include titleSmall
       width: 15rem
       color: $c-clear
       font-family: $font-title
 
   &__content
     position: relative
-    padding-left: 5rem
+    padding-left: 0
     padding-top: 3rem
     height: 100%
-    width: 80%
+    width: 100%
     display: flex
     flex-direction: column
     align-items: flex-start
 
     &__card
+      width: 100%
+      height: 30rem
+      transform: rotate(0deg)
+      &__container
+        width: 100%
       &--first
-        width: 28.5rem
+        width: 100%
+        transform: rotate(0deg)
         height: 12rem
-        transform: rotate(-4deg)
       &--second
-        margin-top: 3rem
-        margin-left: 0.5rem
-        width: 28.5rem
-        height: 12rem
-        transform: rotate(4deg)
+        margin-top: 2rem
+        margin-left: 0
+        width: 100%
+        height: 12.5rem
+        transform: rotate(0deg)
 
     &__information
       &--first
-        width: 24rem
+        width: 100%
+        left: 2rem
+        transform: rotate(0deg)
         position: absolute
         top: 4.8rem
-        left: 7rem
         display: flex
         flex-direction: column
-        transform: rotate(-4deg)
       &--second
-        width: 24rem
+        width: 100%
         position: absolute
-        top: 20rem
-        left: 8rem
+        top: 18.5rem
+        left: 2rem
+        transform: rotate(0deg)
         display: flex
         flex-direction: column
-        transform: rotate(4deg)
 
       &__title
         &__text
@@ -186,50 +188,46 @@ export default defineComponent({
 
       &__description
         @include textSmall
-        width: 85%
+        width: 80%
         margin-top: 1rem
 
-  @include tablet-max
-  &__wrapper
-    padding: 1rem
+  @include pc-min
+    &__wrapper
+      padding: 4rem
 
-  &__header
-    &__text
-      @include titleSmall
+    &__state
+      transform: rotate(-90deg) translateX(5rem) translateY(1.5rem)
 
-  &__content
-    width: 100%
-    padding-left: 0
+    &__header
+      &__text
+        @include titleDefault
 
-    &__card
-      width: 100%
-      height: 30rem
-      transform: rotate(0deg)
+    &__content
+      width: 80%
+      padding-left: 2rem
 
-      &__container
-        width: 100%
+      &__card
+        &--first
+          width: 28.5rem
+          transform: rotate(-4deg)
+        &--second
+          margin-top: 3rem
+          margin-left: 0.5rem
+          width: 28.5rem
+          transform: rotate(4deg)
 
-      &--first
-        width: 100%
-        transform: rotate(0deg)
-      &--second
-        margin-top: 2rem
-        margin-left: 0
-        width: 100%
-        transform: rotate(0deg)
+      &__information
+        &--first
+          top: 5rem
+          width: 24rem
+          left: 4.5rem
+          transform: rotate(-4deg)
+        &--second
+          width: 24rem
+          top: 20rem
+          left: 5rem
+          transform: rotate(4deg)
 
-    &__information
-      &--first
-        width: 100%
-        left: 2rem
-        transform: rotate(0deg)
-      &--second
-        width: 100%
-        position: absolute
-        top: 18.5rem
-        left: 2rem
-        transform: rotate(0deg)
-
-      &__description
-        width: 80%
+        &__description
+          width: 85%
 </style>

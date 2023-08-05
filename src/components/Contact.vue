@@ -2,10 +2,14 @@
   <div class="contact">
     <div class="contact__wrapper">
       <div class="animate__animated animate__jackInTheBox animate__slow">
-        <p class="contact__header__text">Contact,</p>
+        <p class="contact__header__text">
+          {{ $t('sections.contact') }}
+        </p>
       </div>
       <div class="contact__content">
-        <div class="animate__animated animate__jackInTheBox animate__delay-1s contact__content__card__container">
+        <div
+          class="animate__animated animate__jackInTheBox animate__delay-1s contact__content__card__container"
+        >
           <div class="contact__content__card">
             <Card />
           </div>
@@ -16,7 +20,7 @@
           >
             📍
             <span class="contact__content__information__text--padding">
-              Currently based in Madrid
+              {{ $t('contact.location') }}
             </span>
           </p>
           <p
@@ -24,19 +28,21 @@
           >
             ✉️
             <a class="contact__content__information__email" href="mailto: mgrace.shyu@gmail.com">
-              mgrace.shyu@gmail.com
+              {{ $t('contact.email', { email: 'mgrace.shyu@gmail.com' }) }}
             </a>
           </p>
           <p
             class="animate__animated animate__fadeIn animate__delay-2s animate__slower contact__content__information__text"
           >
             📱
-            <span class="contact__content__information__text--padding">698 297 774</span>
+            <span class="contact__content__information__text--padding">
+              {{ $t('contact.phone') }}
+            </span>
           </p>
           <p
             class="animate__animated animate__fadeIn animate__delay-3s animate__faster contact__content__information__subtitle"
           >
-            - Follow me -
+            - {{ $t('contact.followMe') }} -
           </p>
           <div>
             <a
@@ -91,7 +97,7 @@ export default defineComponent({
 <style scoped lang="sass">
 @import "@/styles/_colors.sass"
 @import "@/styles/_base.sass"
-@import "@/styles/_fonts.sass"
+@import "@/styles/_text.sass"
 @import "@/styles/_breakpoints.sass"
 
 
@@ -111,40 +117,42 @@ export default defineComponent({
     flex-direction: column
     width: 100vw
     height: 100vh
-    padding: 4rem
-
+    padding: 1rem
+    padding-top: 3rem
 
   &__header
     &__text
-      @include titleDefault
+      @include titleSmall
       width: 15rem
       color: $c-clear
       font-family: $font-title
 
   &__content
     position: relative
-    padding-left: 5rem
+    padding-left: 0
     padding-top: 3rem
     height: 100%
-    width: 80%
+    width: 100%
     display: flex
     flex-direction: column
     align-items: flex-start
 
     &__card
-      width: 28.5rem
-      height: 20rem
+      width: 100%
+      height: 22rem
+      &__container
+        width: 100%
 
     &__information
       position: absolute
       top: 4.5rem
-      left: 7rem
+      left: 2rem
       display: flex
       flex-direction: column
 
       &__text
         @include textDefault
-        width: 24rem
+        max-width: 20rem
         margin-top: 1rem
         &--padding
           padding-left: 0.5rem
@@ -165,28 +173,23 @@ export default defineComponent({
       height: 50px
       margin-right: 1rem
 
-  @include tablet-max
-  &__wrapper
-    padding: 1rem
+  @include pc-min
+    &__wrapper
+      padding: 4rem
 
-  &__header
-    &__text
-      @include titleSmall
-
-  &__content
-    width: 100%
-    padding-left: 0
-
-    &__card
-      width: 100%
-      height: 22rem
-      transform: rotate(0deg)
-
-      &__container
-        width: 100%
-
-    &__information
-      left: 2rem
+    &__header
       &__text
-          max-width: 20rem
+        @include titleDefault
+
+    &__content
+      width: 80%
+      padding-left: 5rem
+
+      &__card
+        width: 28.5rem
+        height: 20rem
+
+      &__information
+        left: 7rem
+        width: 24rem
 </style>

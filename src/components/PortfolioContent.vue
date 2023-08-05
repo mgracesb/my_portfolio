@@ -53,7 +53,7 @@ export default defineComponent({
   setup() {
     let windowWidth
     let windowHeight
-    
+
     onBeforeMount(() => {
       windowWidth = window.innerWidth
       windowHeight = window.innerHeight
@@ -106,53 +106,49 @@ export default defineComponent({
 
     &__item
       width: auto
-      height: 85%
+      height: 30%
       &--one
         position: absolute
-        top: 5%
+        top: 4%
         left: 55%
-        width: 13%
+        width: 25%
         height: auto
         animation: float 4s ease-in-out infinite
       &--two
         position: absolute
-        top: 25%
-        right: 5%
-        width: 15%
+        top: 55%
+        right: 85%
+        width: 25%
         height: auto
         animation: float 6s ease-in-out infinite
       &--three
         position: absolute
-        bottom: -8%
-        left: 37%
-        width: 23%
+        bottom: -3%
+        left: 16%
+        width: 30%
         height: auto
         transform: rotateY(180deg) rotate(12deg)
         animation: float 8s ease-in-out infinite
 
-  @include tablet-max
-  .container
+  @include pc-min
     &__photo
       &__item
         width: auto
-        height: 30%
+        height: 85%
         &--one
-          position: absolute
           top: 5%
-          left: 70%
-          width: 25%
+          left: 50%
+          width: 13%
         &--two
-          position: absolute
-          top: 55%
-          right: 85%
-          width: 25%
+          top: 25%
+          right: 4%
+          width: 15%
           height: auto
           animation: float 6s ease-in-out infinite
         &--three
-          position: absolute
-          bottom: -3%
-          left: 16%
-          width: 30%
+          bottom: -8%
+          left: 38%
+          width: 20%
 
 .item
    min-height: 500px
