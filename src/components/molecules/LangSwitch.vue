@@ -6,13 +6,13 @@
 </template>
 
 <script lang="ts">
-import { PropType, defineComponent } from 'vue'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'LangSwitch',
   props: {
     isES: {
-      type: Boolean as PropType<boolean>,
+      type: Boolean,
       required: true
     }
   },
