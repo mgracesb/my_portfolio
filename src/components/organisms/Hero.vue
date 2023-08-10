@@ -182,4 +182,16 @@ export default defineComponent({
         height: 1.5rem
         &:first-child
           height: 1rem
+
+  @include pc-xl
+    &__content
+      &__card
+        width: 35rem
+        height: 30rem
+
+      &__information
+        top: 5.5rem
+        &__description
+          max-width: 27rem
+
 </style>

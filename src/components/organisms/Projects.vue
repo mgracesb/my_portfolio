@@ -20,7 +20,7 @@
           </div>
         </div>
         <div
-          class="projects__content__card__container animate__animated animate__jackInTheBox animate__delay-2s"
+          class="projects__content__card__container animate__animated animate__jackInTheBox animate__delay-3s"
         >
           <div class="projects__content__card--third">
             <Card>
@@ -71,7 +71,7 @@
         </div>
         <div class="projects__content__information--third">
           <h1
-            class="animate__animated animate__fadeIn animate__delay-3s animate__slow projects__content__information__title"
+            class="animate__animated animate__fadeIn animate__delay-4s animate__slow projects__content__information__title"
           >
             <p class="projects__content__information__title__text">
               <img
@@ -82,7 +82,7 @@
             </p>
           </h1>
           <p
-            class="animate__animated animate__fadeIn animate__delay-3s animate__slow projects__content__information__description"
+            class="animate__animated animate__fadeIn animate__delay-4s animate__slow projects__content__information__description"
           >
             {{ $t('projects.project__three.description') }}
           </p>
@@ -285,4 +285,33 @@ export default defineComponent({
 
         &__description
           width: 100%
+
+  @include pc-xl
+    &__content
+      padding-top: 4rem
+      &__card
+        &--first
+          width: 30rem
+          height: 10rem
+        &--second
+          margin-top: 4rem
+          margin-left: 0.5rem
+          width: 30rem
+          height: 9rem
+        &--third
+          margin-top: 4rem
+          margin-left: 1.5rem
+          width: 30rem
+          height: 9rem
+
+      &__information
+        &--first
+          top: 6.5rem
+          width: 24rem
+        &--second
+          width: 24rem
+          top: 19.7rem
+        &--third
+          width: 24rem
+          top: 33rem
 </style>

@@ -1,11 +1,18 @@
 $bp-mobile-max: 47.9375rem 
 $bp-tablet: 50rem 
 $bp-desktop-min: 64.0625rem
+$bp-desktop-xl: 92rem
 
 @mixin pc-min
   $stack: mobile !global
 
   @media (min-width: $bp-tablet) 
     @content
-  
+
+@mixin pc-xl
+  $stack: mobile !global
+
+  @media (min-width: $bp-desktop-xl) 
+    @content
+
 
