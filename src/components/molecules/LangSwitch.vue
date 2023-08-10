@@ -1,7 +1,7 @@
 <template>
   <label class="langSwitch">
-    <input type="checkbox" class="langSwitch__input" @click="onSwitch" />
-    <div class="langSwitch__slide round" :class="{ en: !isES }"></div>
+    <input type="checkbox" class="langSwitch__input" :value="modelValue" @click="onSwitch" />
+    <div class="langSwitch__slide round" :class="{ en: !modelValue }"></div>
   </label>
 </template>
 
@@ -11,7 +11,7 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'LangSwitch',
   props: {
-    isES: {
+    modelValue: {
       type: Boolean,
       required: true
     }
@@ -69,11 +69,6 @@ export default defineComponent({
       &:before
         border-radius: 50%
 
-    &.en:before
-      /* Specific styles for .langSwitch__slide with 'en' class */
-      background-image: url('@/assets/en.png')
-      background-size: cover
-
     &:before
       /* Specific styles for .langSwitch__slide without 'en' class */
       position: absolute
@@ -87,20 +82,9 @@ export default defineComponent({
       transition: 0.4s
       background-image: url('@/assets/es.png')
       background-size: cover
+    &.en:before
+      /* Specific styles for .langSwitch__slide with 'en' class */
+      background-image: url('@/assets/en.png')
+      background-size: cover
 
-    // &:before
-    //   position: absolute
-    //   content: ''
-    //   height: 1.5rem
-    //   width: 1.5rem
-    //   left: 5.2rem
-    //   bottom: 4px
-    //   background-color: $c-clear
-    //   -webkit-transition: 0.4s
-    //   transition: 0.4s
-    //   background-image: url('@/assets/es.png')
-    //   background-size: cover
-    //   &.en
-    //     background-image: url('@/assets/en.png')
-    //     background-size: cover
 </style>

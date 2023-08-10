@@ -1,6 +1,6 @@
 <template>
   <header>
-    <LangSwitch :isES="isES" @switch="onSwitch" />
+    <LangSwitch v-model="isES" @switch="onSwitch" />
   </header>
   <PortfolioContent :isES="isES" />
 </template>
@@ -22,6 +22,7 @@ export default defineComponent({
       const storedIsES = localStorage.getItem('isES')
       if (storedIsES !== null) {
         isES.value = JSON.parse(storedIsES)
+        locale.value = isES.value ? 'es' : 'en'
       }
     })
 

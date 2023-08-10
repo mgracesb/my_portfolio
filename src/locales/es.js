@@ -14,12 +14,17 @@ export default {
     project__one: {
       title: 'Desescalada Covid',
       description:
-        'Debido a la situación de confinamiento causada por la pandemia de coronavirus en 2020, el Gobierno implementó un plan de desescalada de 4 fases que variaba según el distrito de atención médica. Desescalada Covid proporcionó información al usuario según la fecha y la ciudad seleccionada.'
+        'Fué una herramienta útil durante el confinamiento por la pandemia de 2020. Proporcionó información detallada sobre el plan de desescalada de 4 fases, adaptado según la fecha y la ciudad seleccionada.'
     },
     project__two: {
+      title: 'CosmicSnap',
+      description:
+        'Es una aplicación web interactiva impulsada por la API de imágenes de la NASA. Carga inicialmente 25 resultados y más a medida que desplazas, mostrando la información de cada imagen.'
+    },
+    project__three: {
       title: 'QueryQuarry',
       description:
-        '¡Sabiduría compartida! QueryQuarry es una plataforma estudiantil donde se crean y comparten preguntas de exámenes, fomentando un entorno de aprendizaje colaborativo. Los estudiantes interactúan entre sí, aportando valiosos conocimientos y soluciones para enriquecer la comprensión.'
+        '¡Sabiduría compartida! es una plataforma estudiantil para compartir preguntas de exámenes y enriquecer la comprensión conjunta.'
     }
   },
   contact: {

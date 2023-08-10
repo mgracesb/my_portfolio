@@ -43,10 +43,9 @@
 import { defineComponent, ref, onBeforeMount } from 'vue'
 import VueScrollSnap from 'vue-scroll-snap'
 import { useElementVisibility } from '@vueuse/core'
-import Hero from './Hero.vue'
-import Projects from './Projects.vue'
-
-import Contact from './Contact.vue'
+import Hero from './organisms/Hero.vue'
+import Projects from './organisms/Projects.vue'
+import Contact from './organisms/Contact.vue'
 
 export default defineComponent({
   components: { VueScrollSnap, Hero, Projects, Contact },

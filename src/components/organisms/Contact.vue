@@ -83,7 +83,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Card from './molecules/Card.vue'
+import Card from '../molecules/Card.vue'
 
 export default defineComponent({
   name: 'ContactSection',
