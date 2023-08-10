@@ -223,7 +223,7 @@ export default defineComponent({
 
         &__logo
           height: 2rem
-          weight: 2rem
+          height: 2rem
           padding-right: 0.75rem
 
       &__description
