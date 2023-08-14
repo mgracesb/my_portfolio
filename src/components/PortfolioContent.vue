@@ -19,7 +19,12 @@
       <img class="container__photo__item" src="@/assets/bg/mercy.png" alt="Mercy Shyu's picture" />
     </div>
 
-    <vue-scroll-snap :fullscreen="true" :height="windowHeight" :width="windowWidth">
+    <vue-scroll-snap
+      v-if="isDesktop"
+      :fullscreen="true"
+      :height="windowHeight"
+      :width="windowWidth"
+    >
       <div ref="hero" class="item">
         <div v-if="heroIsVisible">
           <Hero />
@@ -34,6 +39,18 @@
         <div v-if="contactIsVisible">
           <Contact />
         </div>
+      </div>
+    </vue-scroll-snap>
+
+    <vue-scroll-snap v-else :fullscreen="true" :height="windowHeight" :width="windowWidth">
+      <div ref="hero" class="item">
+        <Hero />
+      </div>
+      <div ref="projects" class="item">
+        <Projects />
+      </div>
+      <div ref="contact" class="item">
+        <Contact />
       </div>
     </vue-scroll-snap>
   </div>
@@ -52,6 +69,7 @@ export default defineComponent({
   setup() {
     let windowWidth
     let windowHeight
+    const isDesktop = window.innerWidth > 500
 
     onBeforeMount(() => {
       windowWidth = window.innerWidth
@@ -75,7 +93,8 @@ export default defineComponent({
       contact,
       contactIsVisible,
       windowWidth,
-      windowHeight
+      windowHeight,
+      isDesktop
     }
   }
 })
