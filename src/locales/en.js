@@ -1,6 +1,6 @@
 export default {
   general: {
-    inprogress: 'WORK IN PROGRESS'
+    inprogress: 'IN PROGRESS'
   },
   sections: {
     hello: 'hello,',
@@ -29,7 +29,7 @@ export default {
     project__three: {
       title: 'QueryQuarry',
       description:
-        'Explore the power of shared knowledge with QueryQuarry, a student platform for storing and exchanging exam questions. Cultivate collaborative learning as students interact, sharing insights and solutions to enhance their understanding.'
+        'Shared Wisdom! It\'s a student platform for sharing exam questions and enhancing collective understanding.'
     }
   },
   contact: {

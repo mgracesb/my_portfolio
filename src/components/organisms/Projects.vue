@@ -93,18 +93,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue'
+import { defineComponent } from 'vue'
 import Card from '../molecules/Card.vue'
 
 export default defineComponent({
   name: 'ProjectSection',
-  components: { Card },
-  setup() {
-    onMounted(() => {
-      console.log('mounted')
-    })
-    return {}
-  }
+  components: { Card }
 })
 </script>
 
