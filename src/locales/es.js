@@ -7,7 +7,7 @@ export default {
     title: 'Soy Mercy Shyu,',
     description__one: `desarrolladora frontend impulsada por el arte de crear aplicaciones web y móviles, visualmente atractivas y con un enfoque en el diseño responsivo.`,
     description__two:
-      'He estado perfeccionando mis habilidades en HTML5, CSS3 y JavaScript, trabajando con frameworks como Vue, ReactJS y React Native para lograr experiencias de desarrollo web y móvil fluidas.',
+      'He estado perfeccionando mis habilidades en HTML5, CSS3 y JavaScript, trabajando con frameworks como VueJS, ReactJS y React Native para lograr experiencias de desarrollo web y móvil fluidas.',
     description__three: 'Algunos de los proyectos en los que tuve el privilegio de contribuir son:'
   },
   projects: {
@@ -22,9 +22,9 @@ export default {
         'Es una aplicación web interactiva impulsada por la API de imágenes de la NASA. Carga inicialmente 25 resultados y más a medida que desplazas, mostrando la información de cada imagen.'
     },
     project__three: {
-      title: 'QueryQuarry',
+      title: 'MindMania',
       description:
-        '¡Sabiduría compartida! es una plataforma estudiantil para compartir preguntas de exámenes y enriquecer la comprensión conjunta.'
+        'Challenge your knowledge with fast-paced trivia quizzes on a wide range of topics!'
     }
   },
   contact: {

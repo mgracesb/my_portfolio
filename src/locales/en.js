@@ -27,9 +27,9 @@ export default {
         'Is an interactive web app using NASA images API, loading 25 results initially, expanding on scroll. Items show image information and clicking on thumbnail will take you to the original source.'
     },
     project__three: {
-      title: 'QueryQuarry',
+      title: 'MindMania',
       description:
-        'Shared Wisdom! It\'s a student platform for sharing exam questions and enhancing collective understanding.'
+        'Is a web app where you can challenge your knowledge with fast-paced trivia quizzes on a wide range of topics!'
     }
   },
   contact: {
