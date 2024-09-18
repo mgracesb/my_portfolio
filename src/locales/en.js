@@ -19,23 +19,22 @@ export default {
     project__one: {
       title: 'Desescalada Covid',
       description:
-        'It was a useful tool during the lockdown due to the 2020 pandemic. It provided detailed information about the 4-phase de-escalation plan, customized based on the selected date and city.'
+        'It was a useful tool during the lockdown due to the 2020 pandemic. It provided detailed information about the 4-phase de-escalation plan, customized based on the selected date and city. Build with: ReactJS, SASS'
     },
     project__two: {
       title: 'CosmicSnap',
       description:
-        'Is an interactive web app using NASA images API, loading 25 results initially, expanding on scroll. Items show image information and clicking on thumbnail will take you to the original source.'
+        'Interactive web app using NASA images API, loading 25 results initially, expanding on scroll. Items show image information and clicking on thumbnail will take you to the original source. Build with: Vue3 + composition API, CSS'
     },
     project__three: {
-      title: 'QueryQuarry',
+      title: 'MindMania',
       description:
-        'Shared Wisdom! It\'s a student platform for sharing exam questions and enhancing collective understanding.'
+        'Web app game Trivia/Kahoot style where you can challenge your knowledge with fast-paced trivia quizzes on a wide range of topics! Build with: Vue3 + composition API, Vuetify, SCSS'
     }
   },
   contact: {
     location: 'Currently based in Madrid',
     email: '{email}',
-    phone: '698 29 77 74',
     followMe: 'Follow me!'
   }
 }

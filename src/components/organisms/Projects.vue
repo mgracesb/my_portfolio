@@ -23,11 +23,7 @@
           class="projects__content__card__container animate__animated animate__jackInTheBox animate__delay-3s"
         >
           <div class="projects__content__card--third">
-            <Card>
-              <div class="projects__state">
-                {{ $t('general.inprogress') }}
-              </div>
-            </Card>
+            <Card />
           </div>
         </div>
         <div class="projects__content__information--first">
@@ -35,6 +31,8 @@
             class="animate__animated animate__fadeIn animate__delay-2s animate__slow projects__content__information__title"
           >
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               class="projects__content__information__title__text"
               href="https://mgracesb.github.io/desescalada-covid/"
             >
@@ -53,6 +51,8 @@
             class="animate__animated animate__fadeIn animate__delay-3s animate__slow projects__content__information__title"
           >
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               class="projects__content__information__title__text"
               href="https://mgracesb.github.io/nasa-images/"
             >
@@ -74,10 +74,16 @@
             class="animate__animated animate__fadeIn animate__delay-4s animate__slow projects__content__information__title"
           >
             <p class="projects__content__information__title__text">
-              <img
-                class="projects__content__information__title__logo"
-                src="@/assets/projects/queryquarry.png"
-              />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                class="projects__content__information__title__text"
+                href="https://mgracesb.github.io/mindmania/"
+              >
+                <img
+                  class="projects__content__information__title__logo"
+                  src="@/assets/projects/mindmania.png"
+              /></a>
               {{ $t('projects.project__three.title') }}
             </p>
           </h1>
@@ -262,19 +268,19 @@ export default defineComponent({
 
       &__information
         &--first
-          top: 4.3rem
+          top: 4rem
           width: 24rem
           left: 4rem
           transform: rotate(-4deg)
         &--second
           width: 24rem
-          top: 16.2rem
+          top: 15.8rem
           left: 4.5rem
           transform: rotate(3deg)
         &--third
           width: 24rem
           transform: rotate(-4deg)
-          top: 28.3rem
+          top: 28.5rem
           left: 5.5rem
 
         &__description

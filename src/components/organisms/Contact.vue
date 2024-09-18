@@ -32,14 +32,6 @@
             </a>
           </p>
           <p
-            class="animate__animated animate__fadeIn animate__delay-2s animate__slower contact__content__information__text"
-          >
-            📱
-            <span class="contact__content__information__text--padding">
-              {{ $t('contact.phone') }}
-            </span>
-          </p>
-          <p
             class="animate__animated animate__fadeIn animate__delay-3s animate__faster contact__content__information__subtitle"
           >
             - {{ $t('contact.followMe') }} -
@@ -63,14 +55,14 @@
             >
               <img
                 class="contact__content__logo animate__animated animate__rotateInDownLeft animate__delay-3s animate__slow"
-                src="@/assets/social-media/twitter.png"
+                src="@/assets/social-media/instagram.png"
                 alt="twitter link"
               />
             </a>
             <a href="https://twitter.com/MercyShyu" target="_blank" rel="noopener noreferrer">
               <img
                 class="contact__content__logo animate__animated animate__rotateInDownLeft animate__delay-3s animate__slower"
-                src="@/assets/social-media/instagram.png"
+                src="@/assets/social-media/twitter.png"
                 alt="instagram link"
               />
             </a>
