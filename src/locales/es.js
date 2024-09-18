@@ -14,23 +14,22 @@ export default {
     project__one: {
       title: 'Desescalada Covid',
       description:
-        'Fué una herramienta útil durante el confinamiento por la pandemia de 2020. Proporcionó información detallada sobre el plan de desescalada de 4 fases, adaptado según la fecha y la ciudad seleccionada.'
+        'Fué una herramienta útil durante el confinamiento por la pandemia de 2020. Proporcionó información detallada sobre el plan de desescalada de 4 fases, adaptado según la fecha y la ciudad seleccionada. Desarrollada con: ReactJS, SCSS.'
     },
     project__two: {
       title: 'CosmicSnap',
       description:
-        'Es una aplicación web interactiva impulsada por la API de imágenes de la NASA. Carga inicialmente 25 resultados y más a medida que desplazas, mostrando la información de cada imagen.'
+        'Aplicación web interactiva impulsada por la API de imágenes de la NASA. Carga inicialmente 25 resultados y más a medida que desplazas, mostrando la información de cada imagen. Desarrollada con: Vue3 + composition API, CSS.'
     },
     project__three: {
       title: 'MindMania',
       description:
-        'Challenge your knowledge with fast-paced trivia quizzes on a wide range of topics!'
+        'Juego tipo Trivial/Kahoot impulsada por la API de Trivia. Desarrollada con: Vue3 + composition API, SASS.'
     }
   },
   contact: {
     location: 'Estoy actualmente en Madrid',
     email: '{email}',
-    phone: '698 29 77 74',
     followMe: '¡Sígueme!'
   }
 }

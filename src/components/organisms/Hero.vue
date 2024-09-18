@@ -120,7 +120,7 @@ export default defineComponent({
 
     &__information
       position: absolute
-      top: 4.5rem
+      top: 4.2rem
       left: 2rem
       display: flex
       flex-direction: column
