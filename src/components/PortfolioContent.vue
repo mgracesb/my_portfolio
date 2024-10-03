@@ -112,6 +112,7 @@ export default defineComponent({
   background-color: $c-dark
 
   &__photo
+    overflow: hidden
     position: sticky
     top: 0
     left: 0

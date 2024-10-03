@@ -10,10 +10,10 @@ export default {
   hero: {
     title: "I'm Mercy Shyu,",
     description__one:
-      'a Frontend Developer driven by the art of crafting user friendly and visually engaging web and mobile applications with a focus on responsive design.',
+      'a Frontend developer who enjoys creating visually appealing web and mobile applications with a focus on responsive design.',
     description__two:
-      'I have been honing my skills in HTML5, CSS3, and JavaScript, working with frameworks like Vue, ReactJs and React Native for seamless web and mobile development experiences.',
-    description__three: 'Some of the projects I had the privilage to contribute to are:'
+      'I am evolving my skills in HTML5, CSS3, and JavaScript, applying frameworks like VueJS, ReactJS, and React Native to build seamless web and mobile development experiences.',
+    description__three: 'Some of the projects I had the privilage to contribute to:'
   },
   projects: {
     project__one: {

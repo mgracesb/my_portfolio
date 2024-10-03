@@ -5,9 +5,9 @@ export default {
   sections: { hello: 'hola,', contact: 'contacto,', projects: 'proyectos,' },
   hero: {
     title: 'Soy Mercy Shyu,',
-    description__one: `desarrolladora frontend impulsada por el arte de crear aplicaciones web y móviles, visualmente atractivas y con un enfoque en el diseño responsivo.`,
+    description__one: `desarrolladora frontend que disfruta creando aplicaciones web y móviles, visualmente atractivas y con un enfoque en el diseño responsivo.`,
     description__two:
-      'He estado perfeccionando mis habilidades en HTML5, CSS3 y JavaScript, trabajando con frameworks como VueJS, ReactJS y React Native para lograr experiencias de desarrollo web y móvil fluidas.',
+      'Me encuentro evolucionando en mis habilidades de HTML5, CSS3 y JavaScript, aplicando frameworks como VueJS, ReactJS y React Native para construir experiencias de desarrollo web y móvil fluidas.',
     description__three: 'Algunos de los proyectos en los que tuve el privilegio de contribuir son:'
   },
   projects: {
